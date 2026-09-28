@@ -408,6 +408,8 @@ tsc --noEmit · eslint (0 errors) · npm run build           ✅
 
 ## What this plan did not do
 
+**Planned in [GO_LIVE_PLAN.md](GO_LIVE_PLAN.md)** — everything below is scheduled there as phase A (blocks going live, ~3½ days) or phase B (after it is live, ~4–5 days).
+
 - **No deployment target.** There is no nginx/Caddy config, no TLS, no host. The README says what the proxy must do (`client_max_body_size`, `X-Forwarded-Proto`, `TRUSTED_PROXY_IPS`).
 - **No real email.** `EMAIL_BACKEND` still defaults to the console, so verification and reset codes are printed, not delivered. Signup does not work for other people until SMTP is configured.
 - **The database is still `boards_db`/`boards_user`** — the optional rename from the Phase 1 notes.
